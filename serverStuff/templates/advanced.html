@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<title>Advanced Sim</title>
+<head>
+	<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/masterStyle.css') }}">
+	<script type="text/javascript" src="{{ url_for('static',filename='javascript/mainJS.js') }}"></script>
+</head>
+
+<body>
+<div id=centerDivTitle>
+	<span id="centerSpanTitle">
+		<h1 id='title'>Advanced Simulation</h1>
+	</span>
+</div>
+<div id='selection'>
+	<div id="centerDivASim">
+		<span id="centerSpanASim">
+			<p id="advancedDescriptor">Enter your simc string below:</p>
+			<textarea id="simEntry" name="simstring" maxlength="2097152" cols="140" rows="34" ></textarea>
+			</br>
+			<button id="advancedSubmitButton" onclick="advSubmitButton()">Submit</button>
+		</span>	
+</div>
+<button id="exampleText" onclick='exampleButton()'>Example</button>
+<div id="loadScreen">
+	<div id="loadImage">
+		<p id="loadText">You are in Queue...</p>
+		<img id="loadGif" src="{{ url_for('static',filename='loader.gif') }}">
+		<img src="/static/loaderComplete.png" style="display:none;">
+		<img src="/static/loaderFailed.png" style="display:none;">
+	</div>
+</div>
+<a href="/">
+	<button id="backBtn">Home</button>
+</a>
+</body>
+</html>

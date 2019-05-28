@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+<title>Simple Sim</title>
+<head>
+	<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/masterStyle.css') }}">
+	<script type="text/javascript" src="{{ url_for('static',filename='javascript/mainJS.js') }}"></script>
+</head>
+
+<body>
+<div id=centerDivTitle>
+	<span id="centerSpanTitle">
+		<h1 id='title'>Simple Simulation</h1>
+	</span>
+</div>
+<div id='simpleSelection'>
+	<table id="simpleTable">
+		<form action="/sim" method='post' id="simform">
+			<tr>
+				<td colspan="2", style="text-align: center;">
+					<h1 id="simpleTableHeader">Character Details</h1>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<p class="inputTexts">Region</p>
+				</td>
+				<td style="text-align: center;">
+					<select name="region" id='realmSelect'>
+						<option value="us">US</option>
+						<option value="eu">EU</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<p class="inputTexts">Server</p>
+				</td>
+				<td style="text-align: center;">
+					<input id="serverInput" type="text" name="realm">
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<p class="inputTexts">Character</p>
+				</td>
+				<td style="text-align: center;">
+					<input id="characterInput" type="text" name="character">
+				</td>
+			</tr>
+		</form>
+		<tr>
+			<td colspan="2", style="text-align: center;">
+				<button id="simpleSubmitButton" onclick="submitButton()">Submit</button>
+			</td>
+		<tr>
+	</table>
+
+</div>
+<div id="loadScreen">
+	<div id="loadImage">
+		<p id="loadText">You are in Queue...</p>
+		<img id="loadGif" src="{{ url_for('static',filename='loader.gif') }}">
+		<img src="/static/loaderComplete.png" style="display:none;">
+		<img src="/static/loaderFailed.png" style="display:none;">
+	</div>
+</div>
+<a href="/">
+	<button id="backBtn">Home</button>
+</a>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<title>Simple Sim</title>
+<head>
+	<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/masterStyle.css') }}">
+	<script type="text/javascript" src="{{ url_for('static',filename='javascript/mainJS.js') }}"></script>
+</head>
+
+<body>
+<div id=centerDivTitle>
+	<span id="centerSpanTitle">
+		<h1 id='title'>Error 401</h1>
+	</span>
+</div>
+<div id='selection'>
+	<p id="firstLine">Sorry, you can't do that.</p><br><p id="secondLine">Here are some possible reasons:</p>
+	<p>&ensp;&ensp;&ensp;&bull; The details of your character are invalid.</p>
+	<p>&ensp;&ensp;&ensp;&bull; You tried to access an unauthorized resource.</p>
+	<p>&ensp;&ensp;&ensp;&bull; You're trying commands you aren't meant to be trying. &#x1F621;</p>
+</div>
+	<a href="/">
+		<button id="backBtn">Home</button>
+	</a>
+</body>
+</html>

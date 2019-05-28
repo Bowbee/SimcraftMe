@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<title>Simple Sim</title>
+<head>
+	<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/masterStyle.css') }}">
+	<script type="text/javascript" src="{{ url_for('static',filename='javascript/mainJS.js') }}"></script>
+</head>
+
+<body>
+<div id=centerDivTitle>
+	<span id="centerSpanTitle">
+		<h1 id='title'>Error 404</h1>
+	</span>
+</div>
+<div id='selection'>
+	<p id="firstLine">Sorry, the report or file you are looking for cannot be found.</p><br><p id="secondLine">Here are some possible reasons:</p>
+	<p>&ensp;&ensp;&ensp;&bull; The file is unaccessable to you.</p>
+	<p>&ensp;&ensp;&ensp;&bull; The file simply does not exist.</p>
+	<p>&ensp;&ensp;&ensp;&bull; Something went really, REALLY wrong with your sim.</p>
+
+</div>
+	<a href="/">
+		<button id="backBtn">Home</button>
+	</a>
+</body>
+</html>

@@ -1,0 +1,29 @@
+# Windows testing using Visual Studio.
+
+# Syntax for this file:
+# http://www.appveyor.com/docs/appveyor-yml
+
+
+# Build worker image (VM template)
+image:
+- Visual Studio 2015
+#- Visual Studio 2017
+
+# fetch repository as zip archive
+shallow_clone: true
+
+# build platform, i.e. x86, x64, Any CPU. This setting is optional.
+platform: x64
+
+# build Configuration, i.e. Debug, Release, etc.
+configuration: WebEngine
+
+# Custom build Configuration, i.e. Debug, Release, etc.
+build_script:	
+  - MSBuild.exe simc_vs2015.sln /t:simc /maxcpucount
+
+test_script:
+  ## pass
+    
+after_test:
+  ## pass

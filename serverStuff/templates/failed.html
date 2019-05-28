@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<title>Simple Sim</title>
+<head>
+	<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/masterStyle.css') }}">
+	<script type="text/javascript" src="{{ url_for('static',filename='javascript/mainJS.js') }}"></script>
+</head>
+
+<body>
+<div id=centerDivTitle>
+	<span id="centerSpanTitle">
+		<h1 id='title'>Failed Sim</h1>
+	</span>
+</div>
+<div id='selection'>
+	<p id="firstLine">Sorry, your simulation failed.</p><br><p id="secondLine">Here are some possible reasons:</p>
+	<p>&ensp;&ensp;&ensp;&bull; Your character name, server name, or region was set incorrectly.</p>
+	<p>&ensp;&ensp;&ensp;&bull; The server is having connectivity issues to Warcraft services.</p>
+	<p>&ensp;&ensp;&ensp;&bull; (Advanced) Your simC string contained an error, and could not be run.</p>
+</div>
+	<a href="/">
+		<button id="backBtn">Home</button>
+	</a>
+</body>
+</html>
