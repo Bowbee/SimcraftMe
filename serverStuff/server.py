@@ -203,5 +203,5 @@ db_filename = "simcraftmeDB.db"
 db = sqlite3.connect(db_filename, check_same_thread=False)
 init_db()
 app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024
-app.run(host="0.0.0.0", port=int("80"), debug=True)
+app.run(host="0.0.0.0", port=int("80"), debug=False)
 
